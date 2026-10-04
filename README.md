@@ -2,6 +2,9 @@
 
 PFO 2 - API con Flask, autenticación básica y SQLite.
 
+- Repositorio: https://github.com/zarateCarlos/sistema-gestion-tareas-api-base-de-datos
+- GitHub Pages: https://zaratecarlos.github.io/sistema-gestion-tareas-api-base-de-datos/
+
 ## Requisitos
 
 - Python 3
