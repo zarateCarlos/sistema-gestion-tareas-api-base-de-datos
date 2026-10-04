@@ -29,16 +29,18 @@ Body JSON:
 }
 ```
 
-PowerShell:
+PowerShell (con UTF-8 por la ñ de contraseña):
 
 ```powershell
-Invoke-RestMethod -Uri http://127.0.0.1:5000/registro -Method POST -ContentType "application/json" -Body '{"usuario":"nombre","contraseña":"1234"}'
+$body = [System.Text.Encoding]::UTF8.GetBytes('{"usuario":"nombre","contraseña":"1234"}')
+Invoke-RestMethod -Uri http://127.0.0.1:5000/registro -Method POST -ContentType "application/json; charset=utf-8" -Body $body
 ```
 
 ### Login - POST /login
 
 ```powershell
-Invoke-RestMethod -Uri http://127.0.0.1:5000/login -Method POST -ContentType "application/json" -Body '{"usuario":"nombre","contraseña":"1234"}'
+$body = [System.Text.Encoding]::UTF8.GetBytes('{"usuario":"nombre","contraseña":"1234"}')
+Invoke-RestMethod -Uri http://127.0.0.1:5000/login -Method POST -ContentType "application/json; charset=utf-8" -Body $body
 ```
 
 ### Tareas - GET /tareas
