@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Gestión de Tareas con API y Base de Datos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.5;
+      color: #222;
+    }
+    h1, h2 { color: #333; }
+    pre {
+      background: #f2f2f2;
+      padding: 12px;
+      overflow-x: auto;
+    }
+    img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      margin: 10px 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sistema de Gestión de Tareas con API y Base de Datos</h1>
+  <p>PFO 2 - API REST con Flask, contraseñas hasheadas y SQLite.</p>
+
+  <h2>Cómo ejecutar</h2>
+  <pre>pip install -r requirements.txt
+python servidor.py</pre>
+  <p>Servidor: http://127.0.0.1:5000</p>
+
+  <h2>Endpoints</h2>
+  <ul>
+    <li><strong>POST /registro</strong> - registra un usuario</li>
+    <li><strong>POST /login</strong> - inicia sesión</li>
+    <li><strong>GET /tareas</strong> - muestra HTML de bienvenida</li>
+  </ul>
+
+  <h3>Ejemplo JSON</h3>
+  <pre>{
+  "usuario": "nombre",
+  "contraseña": "1234"
+}</pre>
+
+  <h2>Capturas de pruebas exitosas</h2>
+  <p>POST /registro</p>
+  <img src="capturas/01-registro.png" alt="Registro">
+
+  <p>POST /login</p>
+  <img src="capturas/02-login.png" alt="Login">
+
+  <p>GET /tareas</p>
+  <img src="capturas/03-tareas.png" alt="Tareas">
+
+  <h2>Respuestas conceptuales</h2>
+  <h3>¿Por qué hashear contraseñas?</h3>
+  <p>Para no guardarlas en texto plano. Si alguien accede a la base de datos, solo ve el hash y no la contraseña original.</p>
+
+  <h3>Ventajas de SQLite en este proyecto</h3>
+  <p>No necesita un servidor aparte, guarda todo en un archivo y es fácil de usar en un trabajo práctico.</p>
+
+  <p>Código: <code>servidor.py</code></p>
+</body>
+</html>
