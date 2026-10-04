@@ -49,9 +49,21 @@ Abrir en el navegador:
 
 http://127.0.0.1:5000/tareas
 
-## Capturas
+## Capturas de pruebas exitosas
 
-Las capturas de las pruebas están en `docs/capturas/`.
+Las imágenes están en la carpeta `capturas/`.
+
+### POST /registro
+
+![Registro](capturas/01-registro.png)
+
+### POST /login
+
+![Login](capturas/02-login.png)
+
+### GET /tareas
+
+![Tareas](capturas/03-tareas.png)
 
 ## Respuestas conceptuales
 
@@ -70,4 +82,5 @@ Si se guarda la contraseña en texto plano y alguien entra a la base de datos, p
 
 - `servidor.py` - API Flask + SQLite
 - `requirements.txt` - dependencias
-- `docs/` - documentación para GitHub Pages y capturas
+- `capturas/` - capturas de pruebas exitosas
+- `docs/` - página de GitHub Pages
