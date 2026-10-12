@@ -1,56 +1,35 @@
 # Sistema de Gestión de Tareas con API y Base de Datos
 
-PFO 2 - API con Flask, autenticación básica y SQLite.
-
-- Repositorio: https://github.com/zarateCarlos/sistema-gestion-tareas-api-base-de-datos
-- GitHub Pages: https://zaratecarlos.github.io/sistema-gestion-tareas-api-base-de-datos/
-
 ## Requisitos
 
 - Python 3
-- Flask (`pip install -r requirements.txt`)
+- Dependencias: `pip install -r requirements.txt`
 
 ## Cómo ejecutar
 
+Terminal 1 (servidor):
+
 ```bash
-pip install -r requirements.txt
 python servidor.py
 ```
 
-El servidor corre en: http://127.0.0.1:5000
+Terminal 2 (cliente en consola):
+
+```bash
+python cliente.py
+```
+
+El servidor queda en http://127.0.0.1:5000
 
 ## Cómo probar
 
-### Registro - POST /registro
+En el cliente:
 
-Body JSON:
+1. Registrar usuario
+2. Iniciar sesión
+3. Ver tareas
 
-```json
-{
-  "usuario": "nombre",
-  "contraseña": "1234"
-}
-```
-
-PowerShell (con UTF-8 por la ñ de contraseña):
-
-```powershell
-$body = [System.Text.Encoding]::UTF8.GetBytes('{"usuario":"nombre","contraseña":"1234"}')
-Invoke-RestMethod -Uri http://127.0.0.1:5000/registro -Method POST -ContentType "application/json; charset=utf-8" -Body $body
-```
-
-### Login - POST /login
-
-```powershell
-$body = [System.Text.Encoding]::UTF8.GetBytes('{"usuario":"nombre","contraseña":"1234"}')
-Invoke-RestMethod -Uri http://127.0.0.1:5000/login -Method POST -ContentType "application/json; charset=utf-8" -Body $body
-```
-
-### Tareas - GET /tareas
-
-Abrir en el navegador:
-
-http://127.0.0.1:5000/tareas
+También se puede abrir en el navegador: http://127.0.0.1:5000/tareas
 
 ## Capturas de pruebas exitosas
 
@@ -84,6 +63,6 @@ Si se guarda la contraseña en texto plano y alguien entra a la base de datos, p
 ## Archivos
 
 - `servidor.py` - API Flask + SQLite
+- `cliente.py` - cliente en consola
 - `requirements.txt` - dependencias
 - `capturas/` - capturas de pruebas exitosas
-- `docs/` - página de GitHub Pages
