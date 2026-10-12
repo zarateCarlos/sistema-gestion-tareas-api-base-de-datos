@@ -1,5 +1,8 @@
 # Sistema de Gestión de Tareas con API y Base de Datos
 
+- Repositorio: https://github.com/zarateCarlos/sistema-gestion-tareas-api-base-de-datos
+- GitHub Pages: https://zaratecarlos.github.io/sistema-gestion-tareas-api-base-de-datos/
+
 ## Requisitos
 
 - Python 3
